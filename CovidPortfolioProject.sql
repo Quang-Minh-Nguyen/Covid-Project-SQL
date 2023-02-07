@@ -7,14 +7,13 @@ Order by 3,4
 --From PortfolioProject..CovidVaccination
 --Order by 3,4
 
---select data that we are going to be using
+--select necessary data 
 
 Select location, Date, total_cases, new_cases, total_deaths, population
 From PortfolioProject..CovidDeath
 Order by 1,2
 
---Looking at Toral cases vs Total Deaths
---Show the likelihood of ding if you contract covid in your country
+--Looking at Toral cases vs Total Deaths. Show the likelihood of dying if you contract covid in your country
 Select location, Date, total_cases, new_cases, total_deaths, (total_deaths/total_cases)*100 as InfectionRate
 From PortfolioProject..CovidDeath
 Where location = 'Vietnam'
